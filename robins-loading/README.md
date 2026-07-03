@@ -2,6 +2,12 @@
 
 A slick, fully custom FiveM loading screen with a video background, music controls, live player count, and animated UI elements. Theme colors are controlled from a single block at the top of `styles.css`.
 
+## Preview
+
+<p align="center">
+  <img src="https://i.imgur.com/K9HgMgI.jpeg" width="600" alt="Loading Screen Preview" />
+</p>
+
 ---
 
 ## Features
