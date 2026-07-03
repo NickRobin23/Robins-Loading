@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading Screen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- VIDEO BACKGROUND -->
+  <video id="bg-video" src="bg.mp4" autoplay muted loop playsinline></video>
+
+  <!-- AUDIO -->
+  <audio id="bg-music" src="music.mp3" loop></audio>
+
+  <!-- OVERLAYS -->
+  <div class="overlay-vignette"></div>
+  <div class="overlay-scanlines"></div>
+  <div class="overlay-noise"></div>
+
+  <!-- DECORATIVE CORNERS -->
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+  <!-- CENTER LOGO & NAME -->
+  <div id="center">
+    <div id="logo-wrap">
+      <img id="logo" src="logo.png" alt="Server Logo"
+           onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='flex';" />
+      <div id="logo-placeholder" style="display:none;">LOGO<br/>HERE</div>
+    </div>
+    <div id="server-name">Your Server</div>
+    <div id="server-sub">FiveM Roleplay</div>
+    <div class="divider"></div>
+  </div>
+
+  <!-- LOADING BAR (bottom-left) -->
+  <div id="loading-block">
+    <div id="loading-header">
+      <span id="loading-label">Initializing</span>
+      <span id="loading-percent">0%</span>
+    </div>
+    <div id="bar-track">
+      <div id="bar-fill"></div>
+    </div>
+    <div id="bar-deco"></div>
+    <div id="loading-status">Connecting to server...</div>
+  </div>
+
+  <!-- MUSIC CONTROL (bottom-right) -->
+  <div id="music-block">
+    <span id="music-label">Music</span>
+    <div id="music-bars" class="paused">
+      <div class="mbar"></div>
+      <div class="mbar"></div>
+      <div class="mbar"></div>
+      <div class="mbar"></div>
+      <div class="mbar"></div>
+    </div>
+    <input id="volume-slider" type="range" min="0" max="100" value="50" title="Volume" />
+    <div id="music-icon" onclick="toggleMusic()" title="Toggle Music">
+      <svg id="icon-play"  viewBox="0 0 10 12" style="display:none"><polygon points="0,0 10,6 0,12"/></svg>
+      <svg id="icon-pause" viewBox="0 0 10 12"><rect x="0" y="0" width="3.5" height="12"/><rect x="6.5" y="0" width="3.5" height="12"/></svg>
+    </div>
+  </div>
+
+  <!-- SPACEBAR HINT -->
+  <div id="space-hint"><kbd>SPACE</kbd> toggle music</div>
+
+  <!-- SERVER INFO (top-right) -->
+  <div id="server-info">
+    <div class="label">Server Status</div>
+    <div class="value" id="player-count">0 Online Players</div>
+    <div id="clock">00:00</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
