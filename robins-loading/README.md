@@ -5,7 +5,7 @@ A slick, fully custom FiveM loading screen with a video background, music contro
 ## Preview
 
 <p align="center">
-  <img src="[https://i.imgur.com/XXXXXXX.png](https://i.imgur.com/K9HgMgI.jpeg)" width="600" alt="Loading Screen Preview" />
+  <img src="https://i.imgur.com/K9HgMgI.jpeg" width="600" alt="Loading Screen Preview" />
 </p>
 
 ---
